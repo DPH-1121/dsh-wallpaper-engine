@@ -1,0 +1,67 @@
+{
+  "name": "dsh-wallpaper-engine",
+  "version": "0.2.1",
+  "description": "Wallpaper Engine Steam Workshop browser for the DeepSeek Harness web GUI: search the workshop without logging into Steam, and see at a glance whether this machine has a Steam session. Wallpapers are the ones Wallpaper Engine itself uses — subscribe from the opened page to wear them on the desktop.",
+  "type": "module",
+  "license": "MIT",
+  "author": "HaydenSmith1121",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaydenSmith1121/dsh-wallpaper-engine.git"
+  },
+  "homepage": "https://github.com/HaydenSmith1121/dsh-wallpaper-engine#readme",
+  "bugs": {
+    "url": "https://github.com/HaydenSmith1121/dsh-wallpaper-engine/issues"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "external": []
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/build.mjs --check",
+    "test": "node scripts/test.mjs",
+    "pack": "node scripts/pack.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "wallpaper-engine",
+    "steam",
+    "workshop",
+    "壁纸",
+    "cordis"
+  ]
+}
