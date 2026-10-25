@@ -1,6 +1,6 @@
 {
   "name": "dsh-wallpaper-engine",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Wallpaper Engine Steam Workshop browser for the DeepSeek Harness web GUI: search the workshop without logging into Steam, and see at a glance whether this machine has a Steam session. Wallpapers are the ones Wallpaper Engine itself uses — subscribe from the opened page to wear them on the desktop.",
   "type": "module",
   "license": "MIT",
