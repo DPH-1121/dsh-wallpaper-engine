@@ -115,7 +115,7 @@ npm run build:check # CI 门禁：lib/ 与 src/ 是否一致
 npm run pack       # 打成可安装的 tgz
 ```
 
-兼容基线：dsh `0.2.1-rc.3` —— 清单过 rc.3 的插件闸门、可装入隔离 profile 并 `--dump-config` 组合成功、`npm test` 在 rc.3 复核时全过。
+兼容基线：dsh `0.2.1-rc.5` —— 清单过 rc.5 的插件闸门、可装入隔离 profile 并 `--dump-config` 组合成功、`npm test`（38 例）与 `build:check` 在 rc.5 复核时全过。
 
 `lib/` 是**提交进仓库**的：这个包可以从 git 直接安装，而 git 安装不会跑本仓库
 的构建脚本。`build:check` 是让提交的那份老实的手段。
